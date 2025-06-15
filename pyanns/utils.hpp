@@ -14,7 +14,7 @@ struct Timer {
   ~Timer() {
     auto ed = CUR_TIME;
     auto ela = std::chrono::duration<double>(ed - start).count();
-    printf("FUCK!!!! [%s] time %lfs\n", msg.c_str(), ela);
+    printf("[TIMER] [%s] elapsed time: %.6fs\n", msg.c_str(), ela);
   }
   std::string msg;
   std::chrono::time_point<std::chrono::high_resolution_clock> start;
